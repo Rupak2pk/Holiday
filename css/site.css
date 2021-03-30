@@ -1,0 +1,17 @@
+/* style.css
+Rupak Kannan
+3/30/2021*/
+body{
+		background-color:#dd02d4;
+		margin: auto;
+		margin-left: 4px;
+}
+	
+.timer {
+	font-size:100px;
+	font-weight:bold;
+	font-family:impact;
+	color:yellow;
+	margin:auto;
+	text-align:center;
+}

@@ -1,0 +1,57 @@
+<!-- Diwali countdown
+	Rupak Kannan
+	3/30/2021
+	
+	Countdown to Diwilai-->
+	
+<!DOCTYPE html>
+
+<html>
+	<head>
+	<title>Diwali countdown</title>
+	<link rel="stylesheet" href="css/site.css"/>
+	</head>
+
+	<body>
+		<script>
+		/*
+Rupak Kannan March 30th 2021
+*/
+
+//Countdown timer
+
+//Set the date
+var countDown_Date = new Date("Nov 4, 2021 00:00:00").getTime();
+
+//Function that updates timer by removing one second 
+var x = setInterval(function() {
+	
+	// Get Today's date and time
+	var date_Now = new Date().getTime();
+	
+	//Find the distance between the two dates
+	var distance = countDown_Date - date_Now;
+	
+	//Time calculations
+	var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+	var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+	var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+	var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+	
+	document.getElementById("countdown").innerHTML = days + " days";
+	
+	if (distance < 0) {
+		clearInterval(x);
+		document.getElementById("countdown").innerHTML = "HAPPY DWIALI!!!!";
+	}
+}, 1000);
+	
+	</script>
+		<div class="timer">
+		<p id="countdown">calculating...........</p>
+		<p>Days until Diwali</p>
+		</div>
+		<hr>
+	</body>
+
+</html>
