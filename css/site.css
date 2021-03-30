@@ -15,3 +15,12 @@ body{
 	margin:auto;
 	text-align:center;
 }
+
+.description{
+	font-size:20px;
+	font-weight:bold;
+	font-family:impact;
+	color:yellow;
+	margin:auto;
+	text-align:center;
+}
